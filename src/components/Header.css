@@ -1,0 +1,148 @@
+
+.HeaderNav{
+    width: 100%;
+    max-width: 1110px;
+    position: fixed;
+    z-index: 100;
+    top: 0px;
+    animation: HeaderAnimation 3s forwards cubic-bezier(0.275, 0.82, 0.165, 1);
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1.0);
+  }
+  
+  .HeaderScrolled {
+    background: rgba(0,0,0, 0.8);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .45);
+}
+
+  .MainHeader{
+    padding: 30px 30px 0px 30px;
+  } 
+
+  .SubHeader h1{
+    font-size: 40px;
+    max-width: 540px;
+    line-height: 1.2;
+    font-weight: 600;
+    animation: HeaderAnimation;
+    opacity: 0;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1.0);
+  }
+
+  .SubHeaderDown{
+    animation: SubHeaderDown;
+    opacity: 0;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1.0);
+  }
+  
+  .TabNavigation{
+    display: grid;
+    height: 40px;
+    padding: 30px 30px 0px 30px;
+    grid-template-columns: repeat(7, auto);
+    grid-gap: 10px;
+    border-bottom: 1px solid #171D25;
+    justify-items: left;
+    
+  }
+
+  .TabNavigation::-webkit-scrollbar {
+    display: none;
+  }
+
+  .FilterButton{
+    color: #68717E;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  
+  .FilterButton:hover{
+    color: #00EAFF;
+    border-bottom: 1px solid #00EAFF;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .ActiveFilter{
+    color: #00EAFF;
+    border-bottom: 1px solid #00EAFF;
+  }
+
+  .SearchBlog{
+    max-width: 50px;
+    width: 50px;
+    height: 25px;
+    border-right: 1px solid #171D25;
+  }
+
+  .SearchButton{
+    padding: 0px 8px 16px 0px;
+    color: #68717E;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1)
+  }
+
+  .SearchButton:hover{
+    color: #00EAFF;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    border-bottom: 1px solid #00EAFF;
+  }
+
+  @media (max-width:640px){
+
+    .MainHeader{
+      align-items: center;
+    }
+
+    .SubHeader h1 {
+      font-size: 24px;
+    }
+
+    .TabNavigation {
+      max-height: 40px;
+      padding: 30px 30px 1px 30px;
+      overflow: scroll;
+      /* overflow-x: hidden; */
+      -webkit-overflow-scrolling: touch;
+      grid-gap: 10px;
+    }
+
+    .TabNavigation a {
+      justify-items: center;
+      text-align: center;
+      width: 130px;
+    }
+
+  }
+
+  @keyframes HeaderAnimation {
+  0%{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes SubHeaderDown {
+    100%{
+        opacity: 0;
+        transform: translateY(-50px);
+        max-height: 0px;
+        overflow: hidden;
+    }
+  
+    35%{
+        max-height: 100px;
+        overflow: visible;
+    }
+
+    0%{
+        opacity: 1;
+        transform: translateY(0); 
+    }
+  }

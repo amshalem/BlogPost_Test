@@ -1,0 +1,100 @@
+.Card {
+    max-width: 350px;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .45);
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    overflow: hidden;
+}
+
+.Card h4 {
+    font-size: 20px;
+    margin: 0 0 10px 0;
+}
+
+.Card p{
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+.Content {
+    padding: 15px;
+    margin-top: 220px;
+    border-radius: 15px;
+    border: 1px solid #0F1116;
+    max-height: 290px;
+    overflow: hidden;
+}
+
+.Card:hover{
+    transform: scale(1.05, 1.05);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, .95);
+}
+
+.Tagline {
+    margin: 0 0 5px 0;
+}
+
+.Tagline h6{
+    font-size: 11px;
+    font-weight: 600;
+    color: #68717E;
+    text-transform: uppercase;
+    margin: 0 0 5px 0;
+    padding: 0;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, .85);
+}
+
+.BlogImage{
+    z-index: -1;
+    position: absolute;
+    border-radius: 15px;
+    overflow: hidden;
+    max-height: 200px;
+    max-width: 350px;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.BlogImage img{
+    width: 130%;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.Card:hover .BlogImage img {
+    transform: translateY(-10px);
+}
+
+.AuthorGroup {
+    max-height: 50px;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.AuthorGroup img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+}
+
+.AuthorGroup h4 {
+   font-size: 15px;
+   font-weight: 600;
+   color: #00EAFF;
+   margin-bottom: 0;
+}
+
+.AuthorGroup p {
+    font-size: 12px;
+    padding: 0;
+ }
+
+ .NameDate {
+     max-height: 50px;
+ }
+
+
+@media (max-width:640px){
+
+    
+}
