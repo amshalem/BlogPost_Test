@@ -104,7 +104,7 @@
       padding: 30px 30px 1px 30px;
       overflow: scroll;
       /* overflow-x: hidden; */
-      overflow-y: hidden;
+      overflow-x: hidden;
       -webkit-overflow-scrolling: touch;
       grid-gap: 10px;
     }
